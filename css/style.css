@@ -8,3 +8,18 @@ html{
     border: solid 1px rgb(145, 145, 145);
     border-radius: 10px;
 }
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    border: solid 1px rgb(200, 200, 200);
+    padding: 5px;
+}
+th{
+    background-color: #f5a700;
+    text-align: left;
+}
+tr:hover{
+    background-color: #efefef;
+}
