@@ -1,0 +1,10 @@
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+.codigo{
+    background-color: #efefef;
+    padding: 0.5rem;
+    border: solid 1px rgb(145, 145, 145);
+    border-radius: 10px;
+}
