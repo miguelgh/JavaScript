@@ -17,10 +17,7 @@
             <p>Con document.write("Hola Mundo!") uno puede escribir una cadena texto sobre el documento</p>
             <div class="codigo">
                 <script language="javascript" type="text/javascript">
-                    <!--
                     document.write("Hola Mundo!")
-                    //
-                    -->
                 </script>
             </div>
         </article>
@@ -89,8 +86,87 @@
                     </tr>
                 </tbody>
             </table>
+            <h3>OPERADORES LÓGICOS</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>== igual que</td>
+                    <td>devuelve true si ambos valores son iguales</td>
+                </tr>
+                <tr>
+                    <td>!= distinto que</td>
+                    <td>devuelve true si ambos valores son distintos</td>
+                </tr>
+                <tr>
+                    <td>>= mayor o igual que</td>
+                    <td>devuelve true si el operando de la izquierda es mayor o igual que el de la derecha</td>
+                </tr>
+                <tr>
+                    <td>> mayor que</td>
+                    <td>devuelve true si si el operando de la izquierda es mayor que el de la derecha</td>
+                </tr>
+                <tr>
+                    <td> < menor que</td>
+                    <td>devuelve true si si el operando de la izquierda es menor que el de la derecha</td>
+                </tr>
+                <tr>
+                    <td><= menor o igual que</td>
+                    <td>devuelve true si el operando de la izquierda es menor o igual que el de la derecha</td>
+                </tr>
+            </table>
+            <h3>Operador condicional (ternario)</h3>
+            <p>La sintaxis de este operador es. condición? valor1:valor2</p>
+            <p>Si la condición es true entonces tomará el valor 1, si no tomara el valor 2</p>
+            <p>ejemplo, esta sentencia asigna el valor "adulto" a la varialbe estado si la edad es mator o igual a 18, si no se le asigna "menor"</p>
+            <p><em>var estado=(edad>=18?"adulto":"menor")</em></p>
         </article>
         <hr>
+        <article>
+            <h2>Funciones y estructuras</h2>
+            <p><b>Switch</b></p>
+            <p>Una sentencia switch permite evaluar una expresión e intenta igualar el valor en una etiqueta (case), si encuentra una coincidencia el programa ejecuta la sentencia de ese case, si no, va por el "default"</p>
+            <p><em>
+                switch(mes){<br>
+                case 1:<br>
+                alert ("El mes es Enero"); <br>
+                break;<br>
+                case 2: <br>
+                alert ("El mes es febrero") <br>
+                break;<br>
+                case 10: <br>
+                alert ("El mes es Octubre") <br>
+                break;<br>
+                default: <br>
+                alert ("El mes no es uno de las opciones"); <br>
+                break; <br>
+                }
+            </em></p>
+            <p><b>Funciones</b></p>
+            <p>La declaración de una función consiste en:</p>
+            <ol>
+                <li>Un nombre</li>
+                <li>una lista de parámetros o argumentos entre paréntesis</li>
+                <li>Conjunto de sentencias JavaScript encerradas entre llaves "{}"</li>
+            </ol>
+            <p><em>
+                function Nombre-funcion(parametro1,parametro2){<br>
+                código a ejecutar por la función <br>
+                }
+            </em></p>
+            <p><b>Sentencia repetitiva FOR</b></p>
+            <p>La sentencia de for se repite hasta que la condición sea falsa</p>
+            <p>su estructura es for ([expresión inicial];[condición];[expresión final]){ejecuta el código}</p>
+            <p><em>
+                for (var i=0;i < 10;i++ ){ <br>
+                console.log ("numero:" + i); <br>
+                }
+            </em></p>
+        </article>
     </section>
 </body>
 </html>

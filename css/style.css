@@ -22,4 +22,9 @@ th{
 }
 tr:hover{
     background-color: #efefef;
+    cursor: pointer;
+}
+em{
+    display: block;
+    margin-left: 20px;
 }
