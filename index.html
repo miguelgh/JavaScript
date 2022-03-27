@@ -189,6 +189,74 @@
                 let mayor-que-diez= arreglo.filter(element => element>10); <br>
                 console.log (mayor-que-diez);
             </em></p>
+
+            <p><b>Array.find()</b></p>
+            <p>Se usa para encontrar el primer elemento que cumpla con la condición. <br>
+            Se crea una nueva variable donde entra el valor buscado</p>
+            <p><em>
+                let arreglo=[10,11,3,20,5]; <br>
+                let existeElementoMayorqueDiez=arreglo.find(element => element > 10); <br>
+                console.log(existeElementoMayorqueDiez)// resultado esperado 11
+            </em></p>
+
+            <p><b>Array.includes()</b></p>
+            <p>Se usa para determinar si un arreglo incluye algún valor específico y devuelve true o false.</p>
+            <p><em>
+                let arreglo=[10,11,3,20,5]; <br>
+                let incluyeVeinte= arreglo.include(20); <br>
+                console.log(incluyeVeinte);// resultado esperado true
+            </em></p>
+
+            <p><b>Array.indexOf()</b></p>
+            <p>Devuelve el primer índice encontrado de un elemento específico, sería su posición en el array, casillero 0, casillero 1, casillero 2, etc. <br>
+            Devuelve -1 si el elemento no existe en el arreglo. <br>
+            En el siguiente ejemplo se busca el índice de 3 en el arreglo.</p>
+            <p><em>
+                let arreglo=[10,11,3,20,5]; <br>
+                let indiceTres= arreglo.indexOf(3); <br>
+                console.log(indiceTres);// resultado esperado 2
+            </em></p>
+            <h3>Busquedas de máximos y mínimos</h3>
+            <p>Para poder buscar un máximo y un mínimo se utilizan las funciones de Math.max() y Math.min()</p>
+            <p><em>
+                Math.max(1,2,3,4,5); //el valor sería 5 <br>
+                Math.min(1,2,3,4,5); //el valor sería 1
+            </em></p>
+            <p>Esta funcion no admite arrays directamente, para poder calcular los valores máximos o minimos dentro de un array hay que pasarlos por otra función "Apply()", que se utiliza en conjunto con Math.max o Math.min.</p>
+            <p>Hay que tener en cuenta que las funciones Math necesitan por lo menos 2 valores para encontrar un mayor o menor y como el array es un solo bloque, en el primer valor se le pasa "null" y el siguiente se carga el array, quedaría así:</p>
+            <p><em>Math.max.apply(null,arreglo) // resultado 5</em></p>
+        </article>
+        <hr>
+        <article>
+            <h2>DOM</h2>
+            <p>El Modelo de Objetos de Documentos (DOM) es una plataforma e interfaz de lenguaje neutro que permite a programadores y scirps acceder y actualizar dinámicamente el contenido, la estructura y el estilo de un documento.</p>
+            <img src="img/DOM.png" alt="DOM Modelo de Objetos del Documento">
+            <p><b>Tipos de nodos</b></p>
+            <p><b>Document </b>nodo raíz del que derivan todos los demás nodos</p>
+            <p><b>Element </b>Representa cada una de las etiquetas HTML, es el único nodo que puede contener atributos y del que pueden derivar otros nodos</p>
+            <p><b>Attr </b>se define un nodo de este tipo para representar cada uno de los atributos de las etiquetas HTML, es uno por cada atributo=valor</p>
+            <p><b>text </b>nodo que contiene el texto encerrado por una etiqueta HTML</p>
+
+            <p><b>Métodos</b></p>
+            <p>Los métodos son acciones que se pueden realizar a los elementos HTML, los más utilizados son:</p>
+            <ol>
+                <li>Encontrar elementos HTML por ID: getElementById</li>
+                <li>Encontrar elementos HTML por nombre de etiqueta: getElementByTagName</li>
+                <li>Encontrar elementos HTML por nombre de clase: getElementByClassName</li>
+                <li>Encontrar elementos HTML por selectores CSS: querySelectorAll</li>
+            </ol>
+            <p>Ejemplo que encuentra elemento con id="intro"</p>
+            <p><em>const element= document.getElementById("intro")</em></p>
+
+            <p>Ejemplo que encuentra todos los &lt;p&gt; </p>
+            <p><em>const element= document.getElementByTagName("p")</em></p>
+
+            <p>Ejemplo que devuelve una lista de todos los elementos con class="intro"; </p>
+            <p><em>const x= document.getElementByClassName("intro")</em></p>
+
+            <p>Ejemplo que devuelve una lista de todos los elementos &lt;p&gt; con class="intro" </p>
+            <p><em>const x= document.querySelectorAll("p.intro")</em></p>
+
         </article>
     </section>
 </body>
