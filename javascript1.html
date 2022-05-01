@@ -4,15 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <style>
+        *{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
     <title>Javascript 1</title>
 </head>
 <body>
     <h1>Guia de JavaScript 1</h1>
     <div id="contenido" style="background-color: beige;">
-
     </div>
+    <hr>
+    <div>
+        <p id="parrafo">Parrafo de prueba para cambiar</p>
+        <div onclick="cambiar_parrafo()"><a href="#">Boton</a></div>
+    </div>
+    <div>
+        <input type="text" id="edit" oninput="agregarParrafo(this.value)" style="display: none;">
+    </div>
+
+
 <!--Siempre dejar el link de los script al final del html, porque como los navegadores leen de arriba hacia abajo, si se va a buscar un objeto y este aun no ha sido leido, es como si no existiera y el js dará error, por eso lo mejor es dejarlo al final así todo el código ya habrá sido procesado-->
 <script src="script.js"></script>
+<script>
+    //Hace aparecer el imput para agregar el texto
+    function cambiar_parrafo(){
+        document.getElementById("edit").style.display="block";
+        let textoBoton = document.getElementById("parrafo").innerText;
+        console.log(textoBoton);
+    };
+    // cambia el valor del párrafo por el contenido en el imput
+    function agregarParrafo(valorImput){
+        document.getElementById("parrafo").innerText=valorImput;
+    };
+    //acompaña a la función de presionar Enter, muentra en consola la tecla presionada, al ser llamanda desde la función del keyup
+    function logMessage(message){
+        console.log(message + "<br>");
+    };
+
+    //Si se presiona Enter el imput desaparece
+    let areaDeTexto=document.getElementById("edit");
+    areaDeTexto.addEventListener('keyup', (e)=>{
+        logMessage(`key "${e.key}" released [event: keyup]`);
+        if(e.key=="Enter"){
+            document.getElementById("edit").style.display="none";
+        }
+    });
+
+</script>
 </body>
 </html>
